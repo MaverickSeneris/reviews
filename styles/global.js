@@ -5,7 +5,7 @@ import { COLORS } from './Colors';
 export const globalStyles = StyleSheet.create({
     container:{
         flex: 1,
-        paddingTop: Platform.OS === 'ios' && 60,
+        paddingTop: Platform.OS === 'ios' && 20,
         padding: 20,
     },
     titleText:{
@@ -14,7 +14,7 @@ export const globalStyles = StyleSheet.create({
         color: COLORS.PRIMARY,
     },
     paragraph:{
-        marginWeight: 8,
+        // margin: 8,
         lineHeight: 20
     }
 })
