@@ -7,13 +7,13 @@ export default  DATA = [
     },
     {
       title: 'Got to Catch them All (again)',
-      rating: 4,
+      rating: 4.3,
       body: 'Lorem Ipsum',
       key: 2,
     },
     {
       title: 'Not So "Final" Fantasy',
-      rating: 5,
+      rating: 4.6,
       body: 'Lorem Ipsum',
       key: 3,
     },
