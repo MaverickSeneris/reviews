@@ -13,7 +13,7 @@ import data from '../data.js';
 import Card from '../shared/card.js';
 import add from '../assets/images/add.png';
 import close from '../assets/images/close.png';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
+import ReviewForm from './reviewForm.js';
 
 export default function Home({navigation}) {
   const [reviews, setReviews] = useState(data);
@@ -30,9 +30,7 @@ export default function Home({navigation}) {
         <TouchableOpacity style={styles.modalClose} onPress={modalToggler}>
           <Image style={styles.icon} source={close} />
         </TouchableOpacity>
-        <View>
-          <Text>Hello from modal</Text>
-        </View>
+        <ReviewForm/>
       </Modal>
 
       <TouchableOpacity style={styles.modalToggle} onPress={modalToggler}>

@@ -1,3 +1,4 @@
 export const COLORS={
-    PRIMARY: '#333'
+    DARK: '#333',
+    LIGHT: "#ddd"
 }
