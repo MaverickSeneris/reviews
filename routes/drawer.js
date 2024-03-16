@@ -2,9 +2,9 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-
 import HomeStack from './homeStack';
-import About from '../screens/about';
+import Header from '../shared/header';
+import AboutStack from './aboutStack';
 
 const Drawer = createDrawerNavigator();
 
@@ -12,18 +12,12 @@ const RootDrawerNavigator = () => (
   <NavigationContainer>
     <Drawer.Navigator
       screenOptions={{
-        headerStyle: {
-          backgroundColor: '#ddd',
-        },
-        headerTintColor: '#333',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
+        header: (props) => <Header {...props} title=" GameZone" />,
         headerBackTitleVisible: false,
       }}
       >
-      <Drawer.Screen name="GameZone" component={HomeStack} />
-      <Drawer.Screen name="About" component={About} />
+      <Drawer.Screen name="Home" component={HomeStack} />
+      <Drawer.Screen name="About" component={AboutStack} />
     </Drawer.Navigator>
   </NavigationContainer>
 );

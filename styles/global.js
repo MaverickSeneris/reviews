@@ -14,7 +14,6 @@ export const globalStyles = StyleSheet.create({
         color: COLORS.PRIMARY,
     },
     paragraph:{
-        // margin: 8,
         lineHeight: 20
     }
 })

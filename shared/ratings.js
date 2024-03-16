@@ -1,17 +1,29 @@
-import React, {useState} from 'react';
-import {Text, View} from 'react-native';
+import React from 'react';
+import {Text, View, StyleSheet} from 'react-native';
 import {Rating} from '@kolking/react-native-rating';
 import {globalStyles} from '../styles/global';
 
 const Ratings = ({score}) => {
-  const [rating, setRating] = useState(score);
+  const rating = score
 
   return (
-    <View>
-      <Rating variant="hearts" size={20} rating={rating} disabled={true} />
-      <Text style={globalStyles.paragraph}>Rated {rating} out of 5</Text>
+    <View style={styles.rating}>
+      <Text style={globalStyles.paragraph}>GameZone Rating: </Text>
+      <Rating variant="hearts" size={17} rating={rating} disabled={true} />
     </View>
   );
 };
+
+const styles= StyleSheet.create({
+    rating:{
+        flexDirection: 'row',
+        borderTopWidth: 1,
+        borderTopColor: "#ddd",
+        marginTop: 10,
+        padding: 15,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})
 
 export default Ratings;

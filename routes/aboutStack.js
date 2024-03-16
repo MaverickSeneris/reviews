@@ -7,17 +7,10 @@ const Stack = createNativeStackNavigator()
 
 const AboutStack = () => (
   <Stack.Navigator
-    // screenOptions={{
-    //   headerStyle: {
-    //     backgroundColor: '#f4511e',
-    //   },
-    //   headerTintColor: '#fff',
-    //   headerTitleStyle: {
-    //     fontWeight: 'bold',
-    //   },
-    //   headerBackTitleVisible: false,
-    // }}
-    >
+  screenOptions={{
+    headerShown:false
+  }}
+  >
       <Stack.Screen
         name='About'
         component={About}
